@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación de tareas -->
+    <div id="task-app" class="task-app">
+        <!-- Encabezado de la aplicación -->
+        <header>
+            <h1>Mis Tareas</h1>
+        </header>
+        <main>
+            <!-- Contenedor para la entrada de nuevas tareas -->
+            <div class="task-input-container">
+                <div class="task-input-group"> <!-- Añadida esta envoltura -->
+                    <label for="task-input"></label>
+                    <input type="text" id="task-input" class="task-input" placeholder="Añade una nueva tarea" aria-label="Nueva tarea">
+                    
+         <!--            <label for="due-date-input">Fecha de Vencimiento</label> -->
+                    <input type="date" id="due-date-input" class="date-input" aria-label="Fecha de vencimiento">
+                    
+              <!--       <label for="priority-input">Prioridad</label> -->
+                    <select id="priority-input" class="priority-input" aria-label="Prioridad de la tarea">
+                        <option value="1">Prioridad 1</option>
+                        <option value="2">Prioridad 2</option>
+                        <option value="3">Prioridad 3</option>
+                        <option value="4">Prioridad 4</option>
+                        <option value="5">Prioridad 5</option>
+                    </select>
+                </div>
+                <!-- Botón para añadir una nueva tarea, ahora fuera pero al lado derecho del div anterior -->
+                <button id="add-task-btn" class="add-task-btn" aria-label="Añadir nueva tarea">Añadir Tarea</button>
+            </div>
+            <!-- Botones para filtrar las tareas -->
+            <div class="filter-buttons">
+                <button id="filter-all" class="btn filter-btn" aria-label="Mostrar todas las tareas">Todas</button>
+                <button id="filter-completed" class="btn filter-btn" aria-label="Filtrar tareas completadas">Completadas</button>
+                <button id="filter-pending" class="btn filter-btn" aria-label="Filtrar tareas pendientes">Pendientes</button>
+                <!-- Botón para cambiar el tema de color -->
+                <button id="toggle-theme-btn" class="toggle-theme-btn" aria-label="Cambiar tema de color">Modo Oscuro</button>
+            </div>
+        </main>
+        <!-- Lista donde se mostrarán las tareas -->
+        <ul id="tasks-list" class="tasks-list"></ul>
+    </div>
+    <!-- Enlace al archivo JavaScript que contiene la lógica de la aplicación -->
+    <script src="script.js"></script>
+</body>
+</html>
